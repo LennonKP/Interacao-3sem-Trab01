@@ -13,38 +13,52 @@
         <div class="container">
             <form>
                 <span>
-                    <label for="borda">Borda</label>
-                    <input type="text" name="borda" id="borda">
+                    <label for="titulo">Título</label>
+                    <input type="text" name="titulo" id="titulo" placeholder="Insira o título...">
                 </span>
                 <span>
-                    <label for="corDeFundo">Cor de fundo</label>
-                    <input type="color" name="corDeFundo" id="corDeFundo">
-                </span>
-                <span>
-                    <label for="titulo">Titulo</label>
-                    <input type="text" name="titulo" id="titulo">
+                    <label for="corTitulo">Cor do título</label>
+                    <input type="color" name="corTitulo" id="corTitulo">
                 </span>
                 <span>
                     <label for="texto">Texto</label>
-                    <input type="text" name="texto" id="texto">
+                    <input type="text" name="texto" id="texto" placeholder="Insira o texto...">
                 </span>
                 <span>
-                    <label for="figura">Figura</label>
-                    <input type="text" name="figura" id="figura">
+                    <label for="corTexto">Cor do texto</label>
+                    <input type="color" name="corTexto" id="corTexto">
+                </span>
+                <br>
+                <span>
+                    <label for="larguraBorda">Largura da borda</label>
+                    <input type="number" name="larguraBorda" id="larguraBorda" placeholder="Ex: 5">
                 </span>
                 <span>
-                    <label for="border-radius">Border Radius</label>
-                    <input type="range" name="border-radius" id="border-radius">
+                    <label for="radiusBorda">Radius da borda</label>
+                    <input type="range" name="radiusBorda" id="radiusBorda" value="0">
+                </span>
+                <span>
+                    <label for="corBorda">Cor da borda</label>
+                    <input type="color" name="corBorda" id="corBorda">
+                </span>
+                <br>
+                <span>
+                    <label for="corFundo">Cor de fundo</label>
+                    <input type="color" name="corFundo" id="corFundo" value="#ffffff">
                 </span>
                 <span>
                     <label for="largura">Largura</label>
-                    <input type="number" name="largura" id="largura">
+                    <input type="number" name="largura" id="largura" placeholder="Ex: 300">
+                </span>
+                <span>
+                    <label for="altura">Altura</label>
+                    <input type="number" name="altura" id="altura" placeholder="Ex: 250">
                 </span>
             </form>
 
             <div id="cartao">
                 <h1 id="tituloCartao">Titulo Inicial</h1>
-                <p id="textoCartao">Texto padrao do cartao para ser editado</p>
+                <p id="textoCartao">Texto padrão do cartao para ser editado</p>
             </div>
             
         </div>

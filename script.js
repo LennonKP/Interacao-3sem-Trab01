@@ -2,34 +2,76 @@ const cartao = document.getElementById("cartao")
 const tituloCartao = document.getElementById("tituloCartao")
 const textoCartao = document.getElementById("textoCartao")
 
+// -----------------------------------
 
-const inputBorda = document.getElementById("borda")
-const corDeFundo = document.getElementById("corDeFundo")
+
+
+
+
+
+
 const titulo = document.getElementById("titulo")
-const texto = document.getElementById("texto")
-const borderRadius = document.getElementById("border-radius")
-const largura = document.getElementById("largura")
+const corTitulo = document.getElementById("corTitulo")
 
-
-inputBorda.addEventListener('change', () => {
-    cartao.style.border = inputBorda.value
-})
-corDeFundo.addEventListener('change', () => {
-    cartao.style.backgroundColor = corDeFundo.value
-})
 titulo.addEventListener('change', () => {
     tituloCartao.innerHTML = titulo.value
 })
+corTitulo.addEventListener('change', () => {
+    console.log(tituloCartao.color)
+    tituloCartao.style.color = corTitulo.value
+})
+
+const texto = document.getElementById("texto")
+const corTexto = document.getElementById("corTexto")
+
 texto.addEventListener('change', () => {
     textoCartao.innerHTML = texto.value
 })
+corTexto.addEventListener('change', () => {
+    textoCartao.style.color = corTexto.value
+})
 
-borderRadius.addEventListener('change', () => {
-    cartao.style.borderRadius = borderRadius.value + "px"
+const larguraBorda = document.getElementById("larguraBorda")
+const radiusBorda = document.getElementById("radiusBorda")
+const corBorda = document.getElementById("corBorda")
+
+larguraBorda.addEventListener('change', () => {
+    cartao.style.borderWidth = larguraBorda.value + 'px'
+})
+
+radiusBorda.addEventListener('change', () => {
+    cartao.style.borderRadius = radiusBorda.value + "px"
+})
+
+corBorda.addEventListener('change', () => {
+    cartao.style.borderColor = corBorda.value
+})
+
+
+const corFundo = document.getElementById("corFundo")
+const largura = document.getElementById("largura")
+const altura = document.getElementById("altura")
+
+corFundo.addEventListener('change', () => {
+    cartao.style.backgroundColor = corFundo.value
 })
 
 largura.addEventListener('change', () => {
-    if (largura.value < 200 || largura.value > 400) return    
+    if (largura.value < 200 || largura.value > 400) {
+        alert('Valores de largura permitidos entre 200 e 400')
+        largura.value = ''
+        return
+    }
 
     cartao.style.width = largura.value + "px"
+})
+
+altura.addEventListener('change', () => {
+    if (altura.value < 200 || altura.value > 400) {
+        alert('Valores de altura permitidos entre 200 e 400')
+        altura.value = ''
+        return
+    }
+
+    cartao.style.height = largura.value + "px"
 })
