@@ -4,12 +4,6 @@ const textoCartao = document.getElementById("textoCartao")
 
 // -----------------------------------
 
-
-
-
-
-
-
 const titulo = document.getElementById("titulo")
 const corTitulo = document.getElementById("corTitulo")
 
